@@ -2,7 +2,7 @@ import Blog from "../model/blogModel.js";
 
 export const createBlog = async (req, res) => {
     try {
-        const { category, title, titleImage, titleImageAltText, subSections } = req.body;
+        const { category, title, titleImage, titleImageAltText, blogContent } = req.body;
 
         // Create a new instance of the Blog model with the provided data
         const newBlog = new Blog({
@@ -10,7 +10,7 @@ export const createBlog = async (req, res) => {
             title,
             titleImage,
             titleImageAltText,
-            subSections
+            blogContent
         });
 
         // Save the new blog entry in the database
